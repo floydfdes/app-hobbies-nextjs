@@ -3,7 +3,7 @@ const Home = () => {
   return (
     <div>
       <Head>
-        <title>Postpred - Home</title>
+        <title>Hobbies - Home</title>
         <meta
           name="description"
           content="On this page you can create a post of your hobbies"

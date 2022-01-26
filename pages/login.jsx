@@ -1,14 +1,22 @@
 import React from "react";
 import Head from "next/head";
 import Link from "next/link";
+import Image from "next/image";
+import singing from "../Assets/images/hobbies_e.svg";
 import styles from "../styles/Login.module.css";
+import { useEffect } from "react/cjs/react.development";
 function Login() {
-  hideHeader();
-  function hideHeader() {
-    try {
-      let header = document.getElementsByClassName("header");
-      console.log(header[0].classList.add("display-none"));
-    } catch (error) {}
+  let screenWidth = 0;
+  useEffect(() => {
+    let header = document.getElementsByClassName("header");
+    console.log(header[0].classList.add("display-none"));
+    screenWidth = window.innerWidth;
+    console.log(screenWidth);
+    window.addEventListener("resize", onResize);
+  }, []);
+  function onResize() {
+    screenWidth = window.innerWidth;
+    console.log(screenWidth);
   }
 
   return (
@@ -24,6 +32,7 @@ function Login() {
           <div
             className={`${styles.loginContainer} col-lg-6 col-md-6 col-sm-12`}
           >
+            {screenWidth < 720 && <Image src={singing} />}
             <h2>Login</h2>
             <form>
               <div className="mt-3">

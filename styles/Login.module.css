@@ -39,8 +39,25 @@
   border: 1px solid tomato;
   outline: none;
 }
-
+.loginContainer img {
+  display: none !important;
+}
 .loginContainer div,
 .loginContainer a {
   color: var(--fourth-color) !important;
+}
+
+@media screen and (max-width: 720px) {
+  .containerHeight {
+    margin: 10px 0px !important;
+  }
+  .loginContainer button,
+  .loginContainer input {
+    width: 100%;
+  }
+  .loginContainer img {
+    display: block !important;
+    height: 200px !important;
+    margin-bottom: 10px !important;
+  }
 }
