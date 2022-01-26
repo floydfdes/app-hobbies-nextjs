@@ -3,7 +3,7 @@ const Hobbies = () => {
   return (
     <div className="container">
       <Head>
-        <title>Postpred - Hobbies</title>
+        <title>Hobbies - Hobbies</title>
       </Head>
       <h1>Hobbies</h1>
     </div>

@@ -14,7 +14,7 @@ function Login() {
   return (
     <div className="container">
       <Head>
-        <title>Postpred - Login</title>
+        <title>Hobbies - Login</title>
       </Head>
       <div className={`container ${styles.containerHeight}`}>
         <div className="row">

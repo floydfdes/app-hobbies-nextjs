@@ -13,7 +13,7 @@ const index = () => {
     <>
       <div className={`container ${styles.home} ${styles.flexContainer}`}>
         <Head>
-          <title>Postpred</title>
+          <title>Hobbies</title>
           <meta
             name="description"
             content="This is the postpred website where you can create, edit, like and delete a post. It also has a heart disease prediction and image classification"

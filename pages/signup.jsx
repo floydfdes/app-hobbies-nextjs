@@ -14,7 +14,7 @@ function SignUp() {
   return (
     <div className="container">
       <Head>
-        <title>Postpred - Signup</title>
+        <title>Hobbies - Signup</title>
       </Head>
       <div className={`container ${styles.containerHeight}`}>
         <div className="row">
