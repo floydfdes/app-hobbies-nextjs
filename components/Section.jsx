@@ -5,7 +5,7 @@ import like from "../Assets/images/Edit.svg";
 import Image from "next/image";
 const Section = () => {
   return (
-    <div className={`container-fluid p-5 ${styles.cardSection}`}>
+    <div className={`container-fluid ${styles.cardSection}`}>
       <div className="text-center">
         <h1>Our services</h1>
         <p className="">

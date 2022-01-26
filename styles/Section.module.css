@@ -16,6 +16,7 @@
 }
 .cardSection {
   background: var(--third-color);
+  padding: 3rem;
 }
 @media screen and (min-width: 720px) {
   .cardSection {
@@ -36,5 +37,9 @@
   }
   .cardSection {
     height: 100%;
+    padding: 1rem;
+  }
+  .sectionCards {
+    height: auto;
   }
 }

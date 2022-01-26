@@ -2,6 +2,13 @@ import Head from "next/head";
 import Section from "../components/Section";
 import styles from "../styles/index.module.css";
 const index = () => {
+  hideHeader();
+  function hideHeader() {
+    try {
+      let header = document.getElementsByClassName("header");
+      console.log(header[0].classList.remove("display-none"));
+    } catch (error) {}
+  }
   return (
     <>
       <div className={`container ${styles.home} ${styles.flexContainer}`}>
