@@ -1,0 +1,40 @@
+.sectionCards {
+  border-radius: 20px !important;
+  border: none !important;
+  font-family: "Roboto Light";
+  color: var(--primary-color);
+  text-align: center;
+  height: 50vh;
+  padding: 35px 25px !important;
+}
+.sectionCards img {
+  height: 80px !important;
+}
+.cardSection h1,
+.cardSection p {
+  color: var(--secondary-color);
+}
+.cardSection {
+  background: var(--third-color);
+}
+@media screen and (min-width: 720px) {
+  .cardSection {
+    height: 100vh;
+  }
+  .cardSection h1,
+  .cardSection p {
+    padding: 0px 25% !important;
+  }
+}
+.cardSection h3 {
+  margin-top: 20px !important;
+}
+
+@media screen and (max-width: 720px) {
+  .cardContainer {
+    flex-direction: column;
+  }
+  .cardSection {
+    height: 100%;
+  }
+}

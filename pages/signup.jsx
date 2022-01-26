@@ -2,7 +2,7 @@ import React from "react";
 import Head from "next/head";
 import Link from "next/link";
 import styles from "../styles/Login.module.css";
-function Login() {
+function SignUp() {
   hideHeader();
   function hideHeader() {
     try {
@@ -14,7 +14,7 @@ function Login() {
   return (
     <div className="container">
       <Head>
-        <title>Postpred - Login</title>
+        <title>Postpred - Signup</title>
       </Head>
       <div className={`container ${styles.containerHeight}`}>
         <div className="row">
@@ -24,8 +24,20 @@ function Login() {
           <div
             className={`${styles.loginContainer} col-lg-6 col-md-6 col-sm-12`}
           >
-            <h2>Login</h2>
+            <h2>Create Account</h2>
             <form>
+              <div className="mt-3">
+                <input type="text" name="firstName" placeholder="First Name" />
+              </div>
+              <div className="mt-3">
+                <input type="text" name="lastName" placeholder="Last Name" />
+              </div>
+              <div className="mt-3">
+                <input type="number" name="age" placeholder="Age" />
+              </div>
+              <div className="mt-3">
+                <input type="gender" name="gender" placeholder="Gender" />
+              </div>
               <div className="mt-3">
                 <input type="email" name="email" placeholder="Email" />
               </div>
@@ -33,13 +45,13 @@ function Login() {
                 <input type="password" name="password" placeholder="Password" />
               </div>
               <div className="mt-3">
-                <button>Login</button>
+                <button>Sign Up</button>
               </div>
             </form>
             <div className="mt-3 message">
-              Dont have an account?
+              Already have an account?
               <strong>
-                <Link href="/signup">Signup</Link>
+                <Link href="/login">Login</Link>
               </strong>
             </div>
           </div>
@@ -49,4 +61,4 @@ function Login() {
   );
 }
 
-export default Login;
+export default SignUp;

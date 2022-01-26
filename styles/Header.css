@@ -1,20 +1,11 @@
-@font-face {
-  font-family: "ralewaySemiBold";
-  src: url("../Assets/fonts/Raleway-SemiBold.ttf") format("truetype");
-}
-@font-face {
-  font-family: "ralewayBold";
-  src: url("../Assets/fonts/Raleway-Bold.ttf") format("truetype");
-}
-
 li {
   list-style: none !important;
 }
 
 a {
   text-decoration: none !important;
-  font-family: "ralewaySemiBold" !important;
-  color: var(--secondary-color) !important;
+  font-family: "Roboto Bold" !important;
+  color: var(--primary-color) !important;
 }
 
 .navbar {
@@ -36,7 +27,7 @@ a {
   margin: 5px auto;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
-  background-color: var(--secondary-color);
+  background-color: var(--primary-color);
 }
 .nav-menu {
   display: flex;

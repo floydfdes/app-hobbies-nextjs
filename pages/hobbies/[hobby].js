@@ -1,6 +1,6 @@
 import { useRouter } from "next/router";
 
-const createUpdateHobby = () => {
+const CreateUpdateHobby = () => {
   const router = useRouter();
   const params = router.query.hobby;
   return (
@@ -10,4 +10,4 @@ const createUpdateHobby = () => {
   );
 };
 
-export default createUpdateHobby;
+export default CreateUpdateHobby;

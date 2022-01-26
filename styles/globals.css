@@ -1,21 +1,26 @@
 @font-face {
-  font-family: "ralewayRegular";
-  src: url("../Assets/fonts/Raleway-Regular.ttf") format("truetype");
+  font-family: "Roboto Light";
+  src: url("../Assets/fonts/Roboto-Light.ttf") format("truetype");
 }
 @font-face {
-  font-family: "ralewayMedium";
-  src: url("../Assets/fonts/Raleway-Medium.ttf") format("truetype");
+  font-family: "Roboto Regular";
+  src: url("../Assets/fonts/Roboto-Regular.ttf") format("truetype");
 }
+@font-face {
+  font-family: "Roboto Medium";
+  src: url("../Assets/fonts/Roboto-Medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Roboto Bold";
+  src: url("../Assets/fonts/Roboto-Bold.ttf") format("truetype");
+}
+
 :root {
-  --primary-color: #008a8b;
-  --secondary-color: #dff8fe;
-  --third-color: #003458;
-  --fourth-color: #82cde5;
-  --primary-color: #d8f7f8;
-  --secondary-color: #033b73;
-  --third-color: #e0cd17;
-  --fourth-color: #015245;
-  --fifth-color: #45d9d5;
+  --primary-color: #0a6aad;
+  --secondary-color: #ffefd2;
+  --third-color: #ed7ca9;
+  --fourth-color: #ee470d;
+  --fifth-color: #ffd802;
 }
 
 html,
@@ -38,4 +43,22 @@ a {
 
 * {
   box-sizing: border-box;
+  /* font-family: "Roboto Light"; */
+}
+
+body {
+  background-color: var(--secondary-color) !important;
+}
+p {
+  font-family: "Roboto Light";
+  font-size: 1rem;
+}
+h1,
+h2,
+h3 {
+  font-family: "Roboto Bold";
+  color: var(--fourth-color);
+}
+.display-none {
+  display: none;
 }

@@ -1,0 +1,29 @@
+.home {
+  height: calc(100vh - 74px);
+}
+.flexContainer {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 30px;
+  align-items: center;
+}
+.flexItemLeft {
+  padding: 10px;
+  flex: 50%;
+  align-items: center;
+}
+
+.flexItemRight {
+  padding: 10px;
+  flex: 50%;
+}
+.flexItemRightContent {
+  background: url("../Assets/images/hobbies_a.svg");
+  height: 50vh;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: var(--third-color);
+  margin-top: 50px;
+  border-radius: 25px;
+  background-position: center;
+}

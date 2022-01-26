@@ -9,7 +9,6 @@ const Navbar = () => {
 
     navLink.forEach((n) => n.addEventListener("click", closeMenu));
     function mobileMenu() {
-      console.log("reached here");
       hamburger.classList.toggle("active");
       navMenu.classList.toggle("active");
     }
@@ -21,40 +20,37 @@ const Navbar = () => {
   }, []);
 
   return (
-    <header className="header">
-      <nav className="navbar">
-        <Link href="/" className="nav-logo">
-          Postpred
-        </Link>
-        <ul className="nav-menu">
-          <li className="nav-item">
-            <Link href="/prediction" className="nav-link">
-              Prediction
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link href="/hobbies" className="nav-link">
-              Hobbies
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link href="/about" className="nav-link">
-              About
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link href="/login" className="nav-link">
-              Login
-            </Link>
-          </li>
-        </ul>
-        <div className="hamburger">
-          <span className="bar"></span>
-          <span className="bar"></span>
-          <span className="bar"></span>
-        </div>
-      </nav>
-    </header>
+    <div className="container">
+      <header className="header">
+        <nav className="navbar">
+          <Link href="/" className="nav-logo">
+            Logo
+          </Link>
+          <ul className="nav-menu">
+            <li className="nav-item">
+              <Link href="/hobbies" className="nav-link">
+                Hobbies
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link href="/about" className="nav-link">
+                About
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link href="/login" className="nav-link">
+                Login
+              </Link>
+            </li>
+          </ul>
+          <div className="hamburger">
+            <span className="bar"></span>
+            <span className="bar"></span>
+            <span className="bar"></span>
+          </div>
+        </nav>
+      </header>
+    </div>
   );
 };
 
