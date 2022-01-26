@@ -4,15 +4,15 @@ import Link from "next/link";
 import Image from "next/image";
 import singing from "../Assets/images/hobbies_e.svg";
 import styles from "../styles/Login.module.css";
-import { useEffect } from "react/cjs/react.development";
+import { useEffect } from "react";
 function Login() {
   let screenWidth = 0;
   useEffect(() => {
     let header = document.getElementsByClassName("header");
     console.log(header[0].classList.add("display-none"));
     screenWidth = window.innerWidth;
-    console.log(screenWidth);
     window.addEventListener("resize", onResize);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   function onResize() {
     screenWidth = window.innerWidth;
