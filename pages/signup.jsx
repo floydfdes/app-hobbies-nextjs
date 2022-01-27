@@ -24,7 +24,8 @@ function SignUp() {
           <div
             className={`${styles.loginContainer} col-lg-6 col-md-6 col-sm-12`}
           >
-            <h2>Create Account</h2>
+            <h2>Welocome !</h2>
+            <div>create Account to explore</div>
             <form>
               <div className="mt-3">
                 <input type="text" name="firstName" placeholder="First Name" />
