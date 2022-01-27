@@ -20,7 +20,7 @@ function Login() {
   }
 
   return (
-    <div className="container">
+    <div className="container login-main-container">
       <Head>
         <title>Hobbies - Login</title>
       </Head>
@@ -32,8 +32,8 @@ function Login() {
           <div
             className={`${styles.loginContainer} col-lg-6 col-md-6 col-sm-12`}
           >
-            {screenWidth < 720 && <Image src={singing} />}
-            <h2>Login</h2>
+            {screenWidth < 768 && <Image src={singing} />}
+            <div>Sign in to continue</div>
             <form>
               <div className="mt-3">
                 <input type="email" name="email" placeholder="Email" />
@@ -48,7 +48,7 @@ function Login() {
             <div className="mt-3 message">
               Dont have an account?
               <strong>
-                <Link href="/signup">Signup</Link>
+                <Link href="/signup">Sign Up</Link>
               </strong>
             </div>
           </div>

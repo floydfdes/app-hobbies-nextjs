@@ -12,7 +12,7 @@ function SignUp() {
   }
 
   return (
-    <div className="container">
+    <div className="container login-main-container">
       <Head>
         <title>Hobbies - Signup</title>
       </Head>

@@ -62,3 +62,9 @@ h3 {
 .display-none {
   display: none;
 }
+
+@media screen and (max-width: 480px) {
+  .login-main-container {
+    padding: 0px !important;
+  }
+}
