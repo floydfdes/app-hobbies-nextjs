@@ -14,7 +14,7 @@ function SignUp() {
       console.log(header[0].classList.add("display-none"));
     } catch (error) {}
   }
-  const onSubmit = (values) => {
+  const onSubmit = async (values) => {
     const result = await signUp(values);
     console.log(result);
   };
