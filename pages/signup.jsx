@@ -2,6 +2,12 @@ import React from "react";
 import Head from "next/head";
 import Link from "next/link";
 import styles from "../styles/Login.module.css";
+import { Formik, Form, Field, ErrorMessage } from "formik";
+import {
+  initialSignUpValues,
+  signUpValidationSchema,
+} from "../Utilities/service";
+
 function SignUp() {
   hideHeader();
   function hideHeader() {
@@ -10,6 +16,9 @@ function SignUp() {
       console.log(header[0].classList.add("display-none"));
     } catch (error) {}
   }
+  const onSubmit = (values) => {
+    console.log(values);
+  };
 
   return (
     <div className="container login-main-container">
@@ -26,29 +35,61 @@ function SignUp() {
           >
             <h2>Welocome !</h2>
             <div>create Account to explore</div>
-            <form>
-              <div className="mt-3">
-                <input type="text" name="firstName" placeholder="First Name" />
-              </div>
-              <div className="mt-3">
-                <input type="text" name="lastName" placeholder="Last Name" />
-              </div>
-              <div className="mt-3">
-                <input type="number" name="age" placeholder="Age" />
-              </div>
-              <div className="mt-3">
-                <input type="gender" name="gender" placeholder="Gender" />
-              </div>
-              <div className="mt-3">
-                <input type="email" name="email" placeholder="Email" />
-              </div>
-              <div className="mt-3">
-                <input type="password" name="password" placeholder="Password" />
-              </div>
-              <div className="mt-3">
-                <button>Sign Up</button>
-              </div>
-            </form>
+            <Formik
+              initialValues={initialSignUpValues}
+              onSubmit={onSubmit}
+              validationSchema={signUpValidationSchema}
+            >
+              <Form>
+                <div>
+                  <Field
+                    type="text"
+                    name="firstName"
+                    placeholder="First Name"
+                  />
+                  <span className="validation-span">
+                    <ErrorMessage name="firstName" />
+                  </span>
+                </div>
+                <div>
+                  <Field type="text" name="lastName" placeholder="Last Name" />
+                  <span className="validation-span">
+                    <ErrorMessage name="lastName" />
+                  </span>
+                </div>
+                <div>
+                  <Field type="number" name="age" placeholder="Age" />
+                  <span className="validation-span">
+                    <ErrorMessage name="age" />
+                  </span>
+                </div>
+                <div>
+                  <Field type="gender" name="gender" placeholder="Gender" />
+                  <span className="validation-span">
+                    <ErrorMessage name="gender" />
+                  </span>
+                </div>
+                <div>
+                  <Field type="email" name="email" placeholder="Email" />
+                  <span className="validation-span">
+                    <ErrorMessage name="email" />
+                  </span>
+                </div>
+                <div>
+                  <Field
+                    type="password"
+                    name="password"
+                    placeholder="Password"
+                  />
+                  <span className="validation-span">
+                    <ErrorMessage name="password" />
+                  </span>
+                </div>
+                <div>
+                  <button>Sign Up</button>
+                </div>
+              </Form>
+            </Formik>
             <div className="mt-3 message">
               Already have an account?
               <strong>

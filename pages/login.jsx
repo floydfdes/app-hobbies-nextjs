@@ -5,8 +5,15 @@ import Image from "next/image";
 import singing from "../Assets/images/hobbies_e.svg";
 import styles from "../styles/Login.module.css";
 import { useEffect } from "react";
+import { Formik, Form, Field, ErrorMessage } from "formik";
+import { loginValidationSchema, initialValues } from "../Utilities/service";
+
 function Login() {
   let screenWidth = 0;
+  const onSubmit = (values) => {
+    console.log(values);
+  };
+
   useEffect(() => {
     let header = document.getElementsByClassName("header");
     console.log(header[0].classList.add("display-none"));
@@ -14,9 +21,9 @@ function Login() {
     window.addEventListener("resize", onResize);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
   function onResize() {
     screenWidth = window.innerWidth;
-    console.log(screenWidth);
   }
 
   return (
@@ -34,17 +41,33 @@ function Login() {
           >
             {screenWidth < 768 && <Image src={singing} />}
             <div>Sign in to continue</div>
-            <form>
-              <div className="mt-3">
-                <input type="email" name="email" placeholder="Email" />
-              </div>
-              <div className="mt-3">
-                <input type="password" name="password" placeholder="Password" />
-              </div>
-              <div className="mt-3">
-                <button>Login</button>
-              </div>
-            </form>
+            <Formik
+              initialValues={initialValues}
+              onSubmit={onSubmit}
+              validationSchema={loginValidationSchema}
+            >
+              <Form>
+                <div className="mt-3">
+                  <Field type="email" name="email" placeholder="Email" />
+                  <span className="validation-span">
+                    <ErrorMessage name="email" />
+                  </span>
+                </div>
+                <div>
+                  <Field
+                    type="password"
+                    name="password"
+                    placeholder="Password"
+                  />
+                  <span className="validation-span">
+                    <ErrorMessage name="password" />
+                  </span>
+                </div>
+                <div className="mt-3">
+                  <button type="submit">Login</button>
+                </div>
+              </Form>
+            </Formik>
             <div className="mt-3 message">
               Dont have an account?
               <strong>

@@ -15,7 +15,7 @@
   height: 90vh;
   padding: 30px;
   text-align: center;
-  margin-top: 40px;
+  margin-top: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -39,8 +39,8 @@
   background: #dfe6e9;
   color: var(--fourth-color);
   padding: 5px;
-
   outline: none;
+  margin-top: 3px;
 }
 .loginContainer img {
   display: none !important;
@@ -48,6 +48,10 @@
 .loginContainer div,
 .loginContainer a {
   color: var(--fourth-color) !important;
+}
+.loginContainer form span {
+  height: 20px;
+  display: block;
 }
 
 @media screen and (max-width: 720px) {
