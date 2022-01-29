@@ -3,10 +3,8 @@ import Head from "next/head";
 import Link from "next/link";
 import styles from "../styles/Login.module.css";
 import { Formik, Form, Field, ErrorMessage } from "formik";
-import {
-  initialSignUpValues,
-  signUpValidationSchema,
-} from "../Utilities/service";
+import { initialSignUpValues, signUpValidationSchema } from "../lib/models";
+import { signUp } from "../controllers/auth";
 
 function SignUp() {
   hideHeader();
@@ -17,7 +15,8 @@ function SignUp() {
     } catch (error) {}
   }
   const onSubmit = (values) => {
-    console.log(values);
+    const result = await signUp(values);
+    console.log(result);
   };
 
   return (
@@ -86,7 +85,7 @@ function SignUp() {
                   </span>
                 </div>
                 <div>
-                  <button>Sign Up</button>
+                  <button type="submit">Sign Up</button>
                 </div>
               </Form>
             </Formik>

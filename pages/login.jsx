@@ -2,16 +2,30 @@ import React from "react";
 import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
+
 import singing from "../Assets/images/hobbies_e.svg";
 import styles from "../styles/Login.module.css";
 import { useEffect } from "react";
+import { ToastContainer, toast } from "react-toastify";
 import { Formik, Form, Field, ErrorMessage } from "formik";
-import { loginValidationSchema, initialValues } from "../Utilities/service";
+import { loginValidationSchema, initialValues } from "../lib/models";
+import { signIn } from "../controllers/auth";
 
 function Login() {
   let screenWidth = 0;
-  const onSubmit = (values) => {
-    console.log(values);
+  const onSubmit = async (values) => {
+    const result = await signIn(values);
+    if (result && result.token) {
+      console.log("success");
+      toast.success("sign in successfull", {
+        position: toast.POSITION.BOTTOM_CENTER,
+      });
+    } else {
+      console.log(result.error.response.data);
+      toast.error(result.error.response.data, {
+        position: toast.POSITION.BOTTOM_CENTER,
+      });
+    }
   };
 
   useEffect(() => {
@@ -31,6 +45,7 @@ function Login() {
       <Head>
         <title>Hobbies - Login</title>
       </Head>
+      <ToastContainer />
       <div className={`container ${styles.containerHeight}`}>
         <div className="row">
           <div
