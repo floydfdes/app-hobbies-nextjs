@@ -4,7 +4,6 @@ import Image from "next/image";
 import Navlogo from "../Assets/images/logo2.svg";
 import NavFavlogo from "../Assets/images/Favicon.svg";
 const Navbar = () => {
-  let screenWidth = 0;
   useEffect(() => {
     var hamburger = document.querySelector(".hamburger");
     var navMenu = document.querySelector(".nav-menu");
@@ -22,26 +21,21 @@ const Navbar = () => {
       navMenu.classList.remove("active");
     }
   }, []);
-  useEffect(() => {
-    screenWidth = window.innerWidth;
-    window.addEventListener("resize", onResize);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-  function onResize() {
-    screenWidth = window.innerWidth;
-  }
 
   return (
     <div className="container">
       <header className="header">
         <nav className="navbar">
-          <Link href="/" className="nav-logo">
-            {screenWidth > 700 ? (
+          <span className="d-none d-sm-block">
+            <Link href="/" className="nav-logo">
               <Image src={Navlogo} alt="" width={160} />
-            ) : (
-              <Image src={NavFavlogo} alt="" width={40} height={40} />
-            )}
-          </Link>
+            </Link>
+          </span>
+          <span className="d-block d-sm-none">
+            <Link href="/" className="nav-logo">
+              <Image src={NavFavlogo} alt="" width={40} />
+            </Link>
+          </span>
           <ul className="nav-menu">
             <li className="nav-item">
               <Link href="/hobbies" className="nav-link">

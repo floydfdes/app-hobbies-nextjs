@@ -30,7 +30,8 @@
   border-radius: 10px;
   font-weight: bold;
 }
-.loginContainer input {
+.loginContainer input,
+.loginContainer select {
   width: 60%;
   height: 40px;
   box-shadow: none;
@@ -70,7 +71,8 @@
     margin-top: 10px;
   }
   .loginContainer button,
-  .loginContainer input {
+  .loginContainer input,
+  .loginContainer select {
     width: 100%;
     height: 45px;
   }

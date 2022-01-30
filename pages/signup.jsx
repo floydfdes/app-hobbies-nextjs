@@ -63,7 +63,16 @@ function SignUp() {
                   </span>
                 </div>
                 <div>
-                  <Field type="gender" name="gender" placeholder="Gender" />
+                  <Field
+                    as="select"
+                    type="gender"
+                    name="gender"
+                    placeholder="Gender"
+                  >
+                    <option value=""></option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                  </Field>
                   <span className="validation-span">
                     <ErrorMessage name="gender" />
                   </span>
