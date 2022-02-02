@@ -10,13 +10,17 @@ import { ToastContainer, toast } from "react-toastify";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import { loginValidationSchema, initialValues } from "../lib/models";
 import { signIn } from "../controllers/auth";
+import { useRouter } from "next/dist/client/router";
+import Cookie from "js-cookie";
 
 function Login() {
   let screenWidth = 0;
+  const router = useRouter();
   const onSubmit = async (values) => {
     const result = await signIn(values);
     if (result && result.token) {
-      console.log("success");
+      Cookie.set("user", JSON.stringify(result.result));
+      router.push("/");
       toast.success("sign in successfull", {
         position: toast.POSITION.BOTTOM_CENTER,
       });

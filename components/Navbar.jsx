@@ -3,7 +3,12 @@ import Link from "next/link";
 import Image from "next/image";
 import Navlogo from "../Assets/images/logo2.svg";
 import NavFavlogo from "../Assets/images/Favicon.svg";
-const Navbar = () => {
+import Cookie from "js-cookie";
+import { useRouter } from "next/router";
+import Avatar from "react-avatar";
+
+const Navbar = ({ currentUser }) => {
+  const router = useRouter();
   useEffect(() => {
     var hamburger = document.querySelector(".hamburger");
     var navMenu = document.querySelector(".nav-menu");
@@ -21,6 +26,11 @@ const Navbar = () => {
       navMenu.classList.remove("active");
     }
   }, []);
+  const logout = () => {
+    console.log("works");
+    Cookie.remove("user");
+    router.push("/");
+  };
 
   return (
     <div className="container">
@@ -48,9 +58,22 @@ const Navbar = () => {
               </Link>
             </li>
             <li className="nav-item">
-              <Link href="/login" className="nav-link">
-                Login
-              </Link>
+              {currentUser ? (
+                <>
+                  <Avatar
+                    name={JSON.parse(currentUser).firstName}
+                    size="24"
+                    round={true}
+                  />
+                  <a className="mx-1" onClick={logout}>
+                    Logout
+                  </a>
+                </>
+              ) : (
+                <Link href="/login" className="nav-link">
+                  Login
+                </Link>
+              )}
             </li>
           </ul>
           <div className="hamburger">
