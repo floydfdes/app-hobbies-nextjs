@@ -1,18 +1,18 @@
 @font-face {
-  font-family: "Roboto Light";
-  src: url("../Assets/fonts/Roboto-Light.ttf") format("truetype");
+  font-family: "OpenSans Light";
+  src: url("../Assets/fonts/OpenSans-Light.ttf") format("truetype");
 }
 @font-face {
-  font-family: "Roboto Regular";
-  src: url("../Assets/fonts/Roboto-Regular.ttf") format("truetype");
+  font-family: "OpenSans Regular";
+  src: url("../Assets/fonts/OpenSans-Regular.ttf") format("truetype");
 }
 @font-face {
-  font-family: "Roboto Medium";
-  src: url("../Assets/fonts/Roboto-Medium.ttf") format("truetype");
+  font-family: "OpenSans Medium";
+  src: url("../Assets/fonts/OpenSans-Medium.ttf") format("truetype");
 }
 @font-face {
-  font-family: "Roboto Bold";
-  src: url("../Assets/fonts/Roboto-Bold.ttf") format("truetype");
+  font-family: "OpenSans Bold";
+  src: url("../Assets/fonts/OpenSans-Bold.ttf") format("truetype");
 }
 
 :root {
@@ -43,20 +43,20 @@ a {
 
 * {
   box-sizing: border-box;
-  /* font-family: "Roboto Light"; */
+  /* font-family: "OpenSans Light"; */
 }
 
 body {
   background-color: var(--secondary-color) !important;
 }
 p {
-  font-family: "Roboto Light";
+  font-family: "OpenSans Light";
   font-size: 1rem;
 }
 h1,
 h2,
 h3 {
-  font-family: "Roboto Bold";
+  font-family: "OpenSans Bold";
   color: var(--fourth-color);
 }
 .display-none {

@@ -1,7 +1,7 @@
 .sectionCards {
   border-radius: 20px !important;
   border: none !important;
-  font-family: "Roboto Light";
+  font-family: "OpenSans Light";
   color: var(--primary-color);
   text-align: center;
   height: 50vh;

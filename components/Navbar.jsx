@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import Navlogo from "../Assets/images/logo2.svg";
-import NavFavlogo from "../Assets/images/Favicon.svg";
+import Navlogo from "../Assets/images/main_logo_1.svg";
+import NavFavlogo from "../Assets/images/appicon.svg";
 import Cookie from "js-cookie";
 import { useRouter } from "next/router";
 import Avatar from "react-avatar";
@@ -49,7 +49,7 @@ const Navbar = ({ currentUser }) => {
           <ul className="nav-menu">
             <li className="nav-item">
               <Link href="/hobbies" className="nav-link">
-                Hobbies
+                Posts
               </Link>
             </li>
             <li className="nav-item">
