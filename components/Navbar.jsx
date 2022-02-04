@@ -43,7 +43,7 @@ const Navbar = ({ currentUser }) => {
           </span>
           <span className="d-block d-sm-none">
             <Link href="/" className="nav-logo">
-              <Image src={NavFavlogo} alt="" width={40} />
+              <Image src={NavFavlogo} alt="" width={40} height={40} />
             </Link>
           </span>
           <ul className="nav-menu">
