@@ -33,7 +33,7 @@ function SignUp() {
             className={`${styles.loginContainer} col-lg-6 col-md-6 col-sm-12`}
           >
             <h2>Welocome !</h2>
-            <div>create Account to explore</div>
+            <div>Create account to explore</div>
             <Formik
               initialValues={initialSignUpValues}
               onSubmit={onSubmit}
@@ -103,6 +103,9 @@ function SignUp() {
               <strong>
                 <Link href="/login">Login</Link>
               </strong>
+            </div>
+            <div>
+              <Link href="/">Back to hobbies</Link>
             </div>
           </div>
         </div>

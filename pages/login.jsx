@@ -59,7 +59,7 @@ function Login() {
             className={`${styles.loginContainer} col-lg-6 col-md-6 col-sm-12`}
           >
             {screenWidth < 768 && <Image src={singing} />}
-            <div>Sign in to continue</div>
+            <h3>Sign in to continue</h3>
             <Formik
               initialValues={initialValues}
               onSubmit={onSubmit}
@@ -90,8 +90,11 @@ function Login() {
             <div className="mt-3 message">
               Dont have an account?
               <strong>
-                <Link href="/signup">Sign Up</Link>
+                <Link href="/signup"> Sign Up</Link>
               </strong>
+            </div>
+            <div>
+              <Link href="/">Back to hobbies</Link>
             </div>
           </div>
         </div>
