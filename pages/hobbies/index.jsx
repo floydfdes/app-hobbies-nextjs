@@ -15,28 +15,35 @@ const Hobbies = ({ data }) => {
       </Head>
 
       <img src="../../" alt="" />
-      <div className="row">
-        {data.map((field) => {
-          return (
-            <div key={field._id} className="col-md-4 col-sm-12">
-              <Card
-                size={"small"}
-                cover={<Image height={200} alt="example" src={RandomImage} />}
-                actions={[
-                  <HeartOutlined key="heart" />,
-                  <EditOutlined key="edit" />,
-                  <DeleteOutlined key="delete" />,
-                ]}
-              >
-                <Meta
-                  avatar={<Avatar src="https://joeschmoe.io/api/v1/random" />}
-                  title={field.title}
-                  description={field.description}
-                />
-              </Card>
-            </div>
-          );
-        })}
+      <div className="container">
+        <div className="row">
+          {data.map((field) => {
+            return (
+              <div key={field._id} className="col-md-4 col-sm-12">
+                <Card
+                  style={{
+                    borderRadius: "20px",
+                    overflow: "hidden",
+                    marginBottom: "5px",
+                  }}
+                  size={"small"}
+                  cover={<Image height={200} alt="example" src={RandomImage} />}
+                  actions={[
+                    <HeartOutlined key="heart" />,
+                    <EditOutlined key="edit" />,
+                    <DeleteOutlined key="delete" />,
+                  ]}
+                >
+                  <Meta
+                    avatar={<Avatar src="https://joeschmoe.io/api/v1/random" />}
+                    title={field.title}
+                    description={field.description}
+                  />
+                </Card>
+              </div>
+            );
+          })}
+        </div>
       </div>
     </div>
   );
