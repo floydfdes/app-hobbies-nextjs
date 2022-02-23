@@ -53,9 +53,6 @@ function Login() {
       <div className={`container ${styles.containerHeight}`}>
         <div className="row">
           <div
-            className={`${styles.loginContainerImage} col-lg-6 col-md-6 d-none d-md-block d-lg-block`}
-          ></div>
-          <div
             className={`${styles.loginContainer} col-lg-6 col-md-6 col-sm-12`}
           >
             {screenWidth < 768 && <Image src={singing} />}
@@ -97,6 +94,9 @@ function Login() {
               <Link href="/">Back to hobbies</Link>
             </div>
           </div>
+          <div
+            className={`${styles.loginContainerImage} col-lg-6 col-md-6 d-none d-md-block d-lg-block`}
+          ></div>
         </div>
       </div>
     </div>

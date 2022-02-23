@@ -16,11 +16,10 @@
 }
 
 :root {
-  --primary-color: #0a6aad;
-  --secondary-color: #ffefd2;
-  --third-color: #ed7ca9;
-  --fourth-color: #ee470d;
-  --fifth-color: #ffd802;
+  --color-1: #3f59ca;
+  --color-2: #ffefd2;
+  --color-3: #f053a0;
+  --color-4: #010010;
 }
 
 html,
@@ -47,7 +46,7 @@ a {
 }
 
 body {
-  background-color: var(--secondary-color) !important;
+  background-color: var(--color-2) !important;
 }
 p {
   font-family: "OpenSans Light";
@@ -57,7 +56,7 @@ h1,
 h2,
 h3 {
   font-family: "OpenSans Bold";
-  color: var(--fourth-color);
+  color: var(--color-1);
 }
 .display-none {
   display: none;
