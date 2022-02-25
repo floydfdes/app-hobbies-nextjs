@@ -101,7 +101,7 @@ function SignUp() {
             <div className="mt-3 message">
               Already have an account?
               <strong>
-                <Link href="/login">Login</Link>
+                <Link href="/login"> Login</Link>
               </strong>
             </div>
             <div>

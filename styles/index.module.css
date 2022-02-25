@@ -12,6 +12,9 @@
   flex: 50%;
   align-items: center;
 }
+.flexItemLeft button {
+  display: none;
+}
 
 .flexItemRight {
   padding: 10px;
@@ -26,4 +29,22 @@
   margin-top: 50px;
   border-radius: 25px;
   background-position: center;
+}
+@media screen and (max-width: 764px) {
+  .flexItemLeft {
+    text-align: center;
+  }
+  .flexItemLeft h1 {
+    font-size: 55px;
+  }
+  .flexItemLeft button {
+    display: inline-block;
+    padding: 14px 28px;
+    border-radius: 30px;
+    background-color: var(--color-1);
+    color: white;
+    width: 100%;
+    max-width: 300px;
+    font-size: 16px;
+  }
 }

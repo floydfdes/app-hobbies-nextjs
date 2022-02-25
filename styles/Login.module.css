@@ -6,6 +6,8 @@
 }
 .loginContainerImage {
   height: 90vh;
+  background-color: var(--color-3) !important;
+  border-radius: 10px 0px 0px 10px;
   background: url("../Assets/images/hobbies_b.svg");
   background-repeat: no-repeat;
   background-size: contain;
@@ -19,6 +21,9 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin-top: 0px;
+  border: 1px solid var(--color-3);
+  border-radius: 0px 10px 10px 0px;
 }
 .loginContainer button {
   border: none;
@@ -35,16 +40,16 @@
   width: 60%;
   height: 40px;
   box-shadow: none;
-  border: none;
+  border: 1px solid var(--color-1);
   border-radius: 10px;
-  background: #dfe6e9;
+  background: transparent;
   color: var(--color-4);
   padding: 5px;
   outline: none;
   margin-top: 3px;
 }
 .loginContainer img {
-  display: none !important;
+  padding-bottom: 5px !important;
 }
 .loginContainer div,
 .loginContainer a {
@@ -55,7 +60,7 @@
   display: block;
 }
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 764px) {
   .containerHeight {
     margin: 0px 0px !important;
     height: 100vh;
@@ -63,6 +68,9 @@
   }
   .loginContainer {
     padding: 20px;
+    margin-top: 0px;
+    border: none !important;
+    border-radius: 0px !important;
   }
   .loginContainer form {
     padding: 20px;

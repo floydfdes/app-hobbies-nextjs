@@ -25,11 +25,14 @@ const index = () => {
         </Head>
 
         <div className={`${styles.flexItemLeft}`}>
-          <h1>Lorem ipsum dolor sit amet consectetur. </h1>
+          <h1>Hello, Welcome to Hobbies</h1>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem
             nobis illum excepturi sint, omnis atque maxime tempora quaerat
-            nostrum placeat
+            nostrum placeat.
+          </p>
+          <p>
+            <button className="btn">Explore</button>
           </p>
         </div>
         <div className={`${styles.flexItemRight} d-none d-md-block d-lg-block`}>
