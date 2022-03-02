@@ -58,6 +58,9 @@ h3 {
   font-family: "OpenSans Bold";
   color: var(--color-1);
 }
+button {
+  font-family: "OpenSans Bold" !important;
+}
 .display-none {
   display: none;
 }
@@ -66,4 +69,13 @@ h3 {
   .login-main-container {
     padding: 0px !important;
   }
+}
+
+.hobbies-container svg {
+  fill: var(--color-1);
+  stroke: var(--color-1);
+}
+.hobbies-container .card-image {
+  background-color: var(--color-3);
+  opacity: 0.8;
 }

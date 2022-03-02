@@ -13,7 +13,7 @@ const Navbar = ({ currentUser }) => {
     var hamburger = document.querySelector(".hamburger");
     var navMenu = document.querySelector(".nav-menu");
     hamburger.addEventListener("click", mobileMenu);
-    var navLink = document.querySelectorAll(".nav-link");
+    var navLink = document.querySelectorAll(".nav-item");
 
     navLink.forEach((n) => n.addEventListener("click", closeMenu));
     function mobileMenu() {
@@ -22,6 +22,7 @@ const Navbar = ({ currentUser }) => {
     }
 
     function closeMenu() {
+      console.log("reaching here");
       hamburger.classList.remove("active");
       navMenu.classList.remove("active");
     }
@@ -36,13 +37,13 @@ const Navbar = ({ currentUser }) => {
     <div className="container">
       <header className="header">
         <nav className="navbar">
-          <span className="d-none d-sm-block">
-            <Link href="/" className="nav-logo">
+          <span className="d-none d-sm-block nav-logo">
+            <Link href="/">
               <Image src={Navlogo} alt="" width={160} />
             </Link>
           </span>
-          <span className="d-block d-sm-none">
-            <Link href="/" className="nav-logo">
+          <span className="d-block d-sm-none nav-logo">
+            <Link href="/">
               <Image src={NavFavlogo} alt="" width={40} height={40} />
             </Link>
           </span>
