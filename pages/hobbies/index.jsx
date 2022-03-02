@@ -6,7 +6,6 @@ import Image from "next/image";
 import { Card } from "react-bootstrap";
 import RandomImage from "../../Assets/images/hobbies_d.svg";
 const Hobbies = ({ data }) => {
-  console.log(data);
   return (
     <div className="container">
       <Head>
@@ -19,13 +18,16 @@ const Hobbies = ({ data }) => {
             data.map((field) => {
               return (
                 <div key={field._id} className="col-md-4 col-sm-12">
-                  <Card style={{ padding: "1rem" }}>
+                  <Card className="shadow-lg p-2">
                     <Image
                       className="card-image"
                       height={200}
                       width={200}
+                      loading="lazy"
                       variant="top"
-                      src="https://picsum.photos/200"
+                      src={`https://source.unsplash.com/random/300x200?sig=${
+                        field._id + Math.random()
+                      }`}
                     />
                     <Card.Body>
                       <Card.Title>{field.title}</Card.Title>

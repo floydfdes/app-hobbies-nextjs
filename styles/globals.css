@@ -74,8 +74,12 @@ button {
 .hobbies-container svg {
   fill: var(--color-1);
   stroke: var(--color-1);
+  font-size: 24px;
 }
 .hobbies-container .card-image {
   background-color: var(--color-3);
   opacity: 0.8;
+}
+.hobbies-container .card {
+  border-radius: 10px;
 }
