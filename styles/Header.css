@@ -33,6 +33,7 @@ a {
   background-color: var(--color-1);
 }
 .nav-menu {
+  z-index: 3;
   display: flex;
   justify-content: space-between;
   align-items: center;

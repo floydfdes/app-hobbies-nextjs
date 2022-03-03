@@ -89,6 +89,7 @@ button {
 }
 .hobbies-container .card {
   border-radius: 10px;
+  background: var(--color-2);
 }
 .hobbies-container .card-title {
   margin-bottom: 0.2rem !important;
