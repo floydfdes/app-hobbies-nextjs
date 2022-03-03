@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Section from "../components/Section";
 import styles from "../styles/index.module.css";
+import About from "./about";
 const index = () => {
   hideHeader();
   function hideHeader() {
@@ -40,6 +41,7 @@ const index = () => {
         </div>
       </div>
       <Section />
+      <About />
     </>
   );
 };

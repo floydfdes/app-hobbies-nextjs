@@ -30,8 +30,12 @@
   border-radius: 25px;
   background-position: center;
 }
+.aboutPage .flexItemRightContent {
+  background: url("../Assets/images/hobbies_d.svg");
+}
 @media screen and (max-width: 764px) {
-  .flexItemLeft {
+  .flexItemLeft,
+  .flexItemRight {
     text-align: center;
   }
   .flexItemLeft h1 {

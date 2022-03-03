@@ -14,7 +14,6 @@ function MyApp({ Component, pageProps }) {
   );
 }
 MyApp.getInitialProps = async ({ ctx }) => {
-  console.log(ctx.pathname);
   let pageProps = {};
   const cookie = parseCookies(ctx.req);
   pageProps = { user: cookie.user };
