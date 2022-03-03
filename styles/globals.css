@@ -58,6 +58,9 @@ h3 {
   font-family: "OpenSans Bold";
   color: var(--color-1);
 }
+.h5 {
+  font-family: "OpenSans Bold";
+}
 button {
   font-family: "OpenSans Bold" !important;
 }
@@ -76,10 +79,21 @@ button {
   stroke: var(--color-1);
   font-size: 24px;
 }
+.hobbies-container svg:hover {
+  fill: var(--color-3);
+  stroke: var(--color-3);
+  font-size: 24px;
+}
 .hobbies-container .card-image {
-  background-color: var(--color-3);
-  opacity: 0.8;
+  border-radius: 10px;
 }
 .hobbies-container .card {
   border-radius: 10px;
+}
+.hobbies-container .card-title {
+  margin-bottom: 0.2rem !important;
+  text-transform: uppercase;
+}
+.hobbies-container .card-body {
+  padding: 1rem 0.3rem !important;
 }

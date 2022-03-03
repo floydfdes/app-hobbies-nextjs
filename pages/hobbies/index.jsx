@@ -17,7 +17,7 @@ const Hobbies = ({ data }) => {
           {data &&
             data.map((field) => {
               return (
-                <div key={field._id} className="col-md-4 col-sm-12">
+                <div key={field._id} className="col-md-4 col-sm-12 my-2">
                   <Card className="shadow-lg p-2">
                     <Image
                       className="card-image"

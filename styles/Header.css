@@ -14,7 +14,7 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0px 24px !important;
+  padding: 8px 24px !important;
   color: var(--color-2) !important;
   font-size: 20px;
   margin-bottom: 0px !important;
