@@ -21,7 +21,7 @@ const Section = () => {
         <div className={`card ${styles.sectionCards} m-4 p-3 shadow`}>
           <Image src={bulb} alt="" />
           <h3>Lorem ipsum</h3>
-          <span>
+          <span className="gray-paras">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis
             porro neque voluptatibus fuga!
           </span>
@@ -29,7 +29,7 @@ const Section = () => {
         <div className={`card ${styles.sectionCards} m-4 p-3 shadow`}>
           <Image src={cardImage} alt="" />
           <h3>Lorem ipsum</h3>
-          <span>
+          <span className="gray-paras">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis
             porro neque voluptatibus fuga!
           </span>
@@ -37,7 +37,7 @@ const Section = () => {
         <div className={`card ${styles.sectionCards} m-4 p-3 shadow`}>
           <Image height={200} src={like} alt="" />
           <h3>Lorem ipsum</h3>
-          <span>
+          <span className="gray-paras">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis
             porro neque voluptatibus fuga!
           </span>

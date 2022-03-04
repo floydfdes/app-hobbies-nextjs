@@ -27,7 +27,7 @@ const index = () => {
 
         <div className={`${styles.flexItemLeft}`}>
           <h1>Hello, Welcome to Hobbies</h1>
-          <p>
+          <p className="gray-paras">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem
             nobis illum excepturi sint, omnis atque maxime tempora quaerat
             nostrum placeat.

@@ -14,7 +14,7 @@ const About = () => {
           </div>
           <div className={`${styles.flexItemRight}`}>
             <h1>About US</h1>
-            <p>
+            <p className="gray-paras">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Voluptatem nobis illum excepturi sint, omnis atque maxime tempora
               quaerat nostrum placeat.

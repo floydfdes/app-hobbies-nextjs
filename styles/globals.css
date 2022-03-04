@@ -16,8 +16,13 @@
 }
 
 :root {
+  --color-1: #2e79b7;
+  --color-2: #ffffff;
+  --color-3: #facf00;
+  --color-4: #434142;
+  --color-5: #939487;
   --color-1: #3f59ca;
-  --color-2: #ffefd2;
+  --color-2: #ffffff;
   --color-3: #f053a0;
   --color-4: #010010;
 }
@@ -97,4 +102,8 @@ button {
 }
 .hobbies-container .card-body {
   padding: 1rem 0.3rem !important;
+}
+
+.gray-paras {
+  color: var(--color-5);
 }
