@@ -38,10 +38,10 @@ const Hobbies = ({ data }) => {
                           <AiTwotoneHeart></AiTwotoneHeart> {field.likes.length}
                         </span>
                         <span variant="primary">
-                          <FiEdit2></FiEdit2>
+                          <FiEdit2></FiEdit2> Edit
                         </span>
                         <span variant="primary">
-                          <AiTwotoneDelete></AiTwotoneDelete>
+                          <AiTwotoneDelete></AiTwotoneDelete> Delete
                         </span>
                       </div>
                     </Card.Body>

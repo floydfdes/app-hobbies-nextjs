@@ -32,6 +32,10 @@
 }
 .aboutPage .flexItemRightContent {
   background: url("../Assets/images/hobbies_d.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  background-position: center;
 }
 @media screen and (max-width: 764px) {
   .flexItemLeft,

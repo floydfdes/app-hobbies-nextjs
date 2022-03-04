@@ -1,7 +1,7 @@
 import Head from "next/head";
+import About from "../components/About";
 import Section from "../components/Section";
 import styles from "../styles/index.module.css";
-import About from "./about";
 const index = () => {
   hideHeader();
   function hideHeader() {

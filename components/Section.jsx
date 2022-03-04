@@ -3,7 +3,11 @@ import cardImage from "../Assets/images/Idea.svg";
 import bulb from "../Assets/images/Login.svg";
 import like from "../Assets/images/Edit.svg";
 import Image from "next/image";
+import Head from "next/head";
 const Section = () => {
+  <Head>
+    <title>Hobbies-section</title>
+  </Head>;
   return (
     <div className={`container-fluid ${styles.cardSection}`}>
       <div className="text-center">
