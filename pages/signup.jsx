@@ -46,19 +46,19 @@ function SignUp() {
                     name="firstName"
                     placeholder="First Name"
                   />
-                  <span className="validation-span">
+                  <span className={`${styles.validationError}`}>
                     <ErrorMessage name="firstName" />
                   </span>
                 </div>
                 <div>
                   <Field type="text" name="lastName" placeholder="Last Name" />
-                  <span className="validation-span">
+                  <span className={`${styles.validationError}`}>
                     <ErrorMessage name="lastName" />
                   </span>
                 </div>
                 <div>
                   <Field type="number" name="age" placeholder="Age" />
-                  <span className="validation-span">
+                  <span className={`${styles.validationError}`}>
                     <ErrorMessage name="age" />
                   </span>
                 </div>
@@ -73,13 +73,13 @@ function SignUp() {
                     <option value="Male">Male</option>
                     <option value="Female">Female</option>
                   </Field>
-                  <span className="validation-span">
+                  <span className={`${styles.validationError}`}>
                     <ErrorMessage name="gender" />
                   </span>
                 </div>
                 <div>
                   <Field type="email" name="email" placeholder="Email" />
-                  <span className="validation-span">
+                  <span className={`${styles.validationError}`}>
                     <ErrorMessage name="email" />
                   </span>
                 </div>
@@ -89,7 +89,7 @@ function SignUp() {
                     name="password"
                     placeholder="Password"
                   />
-                  <span className="validation-span">
+                  <span className={`${styles.validationError}`}>
                     <ErrorMessage name="password" />
                   </span>
                 </div>

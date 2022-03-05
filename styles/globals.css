@@ -95,6 +95,7 @@ button {
 .hobbies-container .card {
   border-radius: 10px;
   background: var(--color-2);
+  height: 350px;
 }
 .hobbies-container .card-title {
   margin-bottom: 0.2rem !important;
@@ -103,7 +104,13 @@ button {
 .hobbies-container .card-body {
   padding: 1rem 0.3rem !important;
 }
-
+.hobbies-container .card-body span {
+  display: flex;
+  align-items: center;
+}
 .gray-paras {
   color: var(--color-4);
+}
+.card-text {
+  color: var(--color-5);
 }

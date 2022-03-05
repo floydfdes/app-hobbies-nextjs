@@ -17,7 +17,7 @@ const Hobbies = ({ data }) => {
           {data &&
             data.map((field) => {
               return (
-                <div key={field._id} className="col-md-4 col-sm-12 my-2">
+                <div key={field._id} className="col-md-3 col-sm-12 my-2">
                   <Card className="shadow-lg p-2">
                     <Image
                       className="card-image"
@@ -33,15 +33,15 @@ const Hobbies = ({ data }) => {
                       <Card.Title>{field.title}</Card.Title>
                       <Card.Text>{field.description}</Card.Text>
 
-                      <div className="d-flex justify-content-between">
+                      <div className="d-flex justify-content-around">
                         <span variant="primary">
                           <AiTwotoneHeart></AiTwotoneHeart> {field.likes.length}
                         </span>
                         <span variant="primary">
-                          <FiEdit2></FiEdit2> Edit
+                          <FiEdit2></FiEdit2>
                         </span>
                         <span variant="primary">
-                          <AiTwotoneDelete></AiTwotoneDelete> Delete
+                          <AiTwotoneDelete></AiTwotoneDelete>
                         </span>
                       </div>
                     </Card.Body>

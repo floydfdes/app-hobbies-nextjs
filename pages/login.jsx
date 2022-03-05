@@ -73,7 +73,7 @@ function Login() {
               <Form>
                 <div className="mt-3">
                   <Field type="email" name="email" placeholder="Email" />
-                  <span className="validation-span">
+                  <span className={`${styles.validationError}`}>
                     <ErrorMessage name="email" />
                   </span>
                 </div>
@@ -83,7 +83,7 @@ function Login() {
                     name="password"
                     placeholder="Password"
                   />
-                  <span className="validation-span">
+                  <span className={`${styles.validationError}`}>
                     <ErrorMessage name="password" />
                   </span>
                 </div>

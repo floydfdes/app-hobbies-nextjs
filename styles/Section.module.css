@@ -16,12 +16,9 @@
 }
 .cardSection {
   background: var(--color-3);
-  padding: 3rem;
+  padding: 5rem;
 }
 @media screen and (min-width: 720px) {
-  .cardSection {
-    height: 100vh;
-  }
   .cardSection h1,
   .cardSection p {
     padding: 0px 25% !important;

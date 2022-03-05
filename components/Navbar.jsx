@@ -55,7 +55,12 @@ const Navbar = ({ currentUser }) => {
             </li>
             <li className="nav-item">
               <Link href="/about" className="nav-link">
-                About
+                About Us
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link href="/hobbies" className="nav-link">
+                Contact Us
               </Link>
             </li>
             <li className="nav-item">
