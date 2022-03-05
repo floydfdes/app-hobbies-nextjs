@@ -85,10 +85,10 @@ button {
 }
 
 .hobbies-container svg {
-  fill: var(--color-1);
-  stroke: var(--color-1);
   font-size: 24px;
 }
+/* fill: var(--color-1);
+stroke: var(--color-1); */
 .hobbies-container svg:hover {
   fill: var(--color-3);
   stroke: var(--color-3);

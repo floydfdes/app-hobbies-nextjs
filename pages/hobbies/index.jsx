@@ -34,14 +34,21 @@ const Hobbies = ({ data }) => {
                       <Card.Text>{field.description}</Card.Text>
 
                       <div className="d-flex justify-content-around">
-                        <span variant="primary">
-                          <AiTwotoneHeart></AiTwotoneHeart> {field.likes.length}
+                        <span>
+                          <AiTwotoneHeart
+                            fill="deeppink"
+                            stroke="deeppink"
+                          ></AiTwotoneHeart>{" "}
+                          {field.likes.length}
                         </span>
-                        <span variant="primary">
-                          <FiEdit2></FiEdit2>
+                        <span>
+                          <FiEdit2 fill="green" stroke="green"></FiEdit2>
                         </span>
-                        <span variant="primary">
-                          <AiTwotoneDelete></AiTwotoneDelete>
+                        <span>
+                          <AiTwotoneDelete
+                            fill="darkred"
+                            stroke="darkred"
+                          ></AiTwotoneDelete>
                         </span>
                       </div>
                     </Card.Body>
