@@ -12,10 +12,6 @@ const Section = () => {
     <div className={`container-fluid ${styles.cardSection}`}>
       <div className="text-center">
         <h1>Our services</h1>
-        <p className="">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis
-          fugiat ex corporis ab laborum odit tempora distinctio doloribus.
-        </p>
       </div>
       <div className={`d-flex ${styles.cardContainer}`}>
         <div className={`card ${styles.sectionCards} m-4 p-3 shadow`}>

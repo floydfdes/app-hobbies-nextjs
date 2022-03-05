@@ -16,7 +16,7 @@
 }
 
 :root {
-  --color-1: #2e79b7;
+  --color-1: #005dbb;
   --color-2: #ffffff;
   --color-3: #facf00;
   --color-4: #434142;
@@ -105,5 +105,5 @@ button {
 }
 
 .gray-paras {
-  color: var(--color-5);
+  color: var(--color-4);
 }
