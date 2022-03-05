@@ -26,11 +26,10 @@ const index = () => {
         </Head>
 
         <div className={`${styles.flexItemLeft}`}>
-          <h1>Hello, Welcome to Hobbies</h1>
+          <h1>Hello Guest, Welcome to Hobbies</h1>
           <p className="gray-paras">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem
-            nobis illum excepturi sint, omnis atque maxime tempora quaerat
-            nostrum placeat.
+            Create and share your hobbies to the whole world. Its simple and
+            completely free.
           </p>
           <p>
             <button className="btn">Explore</button>
