@@ -42,17 +42,22 @@
   .flexItemRight {
     text-align: center;
   }
-  .flexItemLeft h1 {
+  .flexItemLeft h1,
+  .flexItemRight h1 {
     font-size: 55px;
   }
   .flexItemLeft button {
     display: inline-block;
     padding: 14px 28px;
-    border-radius: 30px;
+    border-radius: 10px;
     background-color: var(--color-1);
     color: white;
     width: 100%;
     max-width: 300px;
     font-size: 16px;
+  }
+  .flexItemLeft button:hover {
+    background-color: var(--color-3);
+    color: white;
   }
 }
