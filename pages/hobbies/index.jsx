@@ -10,7 +10,7 @@ const Hobbies = ({ data, user }) => {
   const [currentUser, setCurrentUser] = useState();
 
   useEffect(() => {
-    setCurrentUser(JSON.parse(user));
+    if (props.user) setCurrentUser(JSON.parse(user));
   }, []);
 
   // console.log(data);

@@ -7,7 +7,7 @@ const Index = (props) => {
   const [currentUser, setCurrentUser] = useState();
 
   useEffect(() => {
-    setCurrentUser(JSON.parse(props.user));
+    if(props.user)setCurrentUser(JSON.parse(props.user));
   }, []);
   hideHeader();
   function hideHeader() {
