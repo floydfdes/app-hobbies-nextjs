@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import About from "../components/About";
 import Section from "../components/Section";
 import styles from "../styles/index.module.css";
-const index = (props) => {
+const Index = (props) => {
   const [currentUser, setCurrentUser] = useState();
 
   useEffect(() => {
@@ -53,4 +53,4 @@ const index = (props) => {
   );
 };
 
-export default index;
+export default Index;
