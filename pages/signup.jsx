@@ -2,6 +2,7 @@ import React from "react";
 import Head from "next/head";
 import Link from "next/link";
 import styles from "../styles/Login.module.css";
+import { ToastContainer, toast } from "react-toastify";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import { initialSignUpValues, signUpValidationSchema } from "../lib/models";
 import { signUp } from "../controllers/auth";
@@ -16,7 +17,18 @@ function SignUp() {
   }
   const onSubmit = async (values) => {
     const result = await signUp(values);
-    console.log(result);
+    if (result && result.token) {
+      Cookie.set("user", JSON.stringify(result.result));
+      router.push("/");
+      toast.success("sign in successfull", {
+        position: toast.POSITION.BOTTOM_CENTER,
+      });
+    } else {
+      console.log(result.error.response.data);
+      toast.error(result.error.response.data, {
+        position: toast.POSITION.BOTTOM_CENTER,
+      });
+    }
   };
 
   return (
@@ -24,6 +36,7 @@ function SignUp() {
       <Head>
         <title>Hobbies - Signup</title>
       </Head>
+      <ToastContainer />
       <div className={`container ${styles.containerHeight}`}>
         <div className="row">
           <div

@@ -1,8 +1,14 @@
 import Head from "next/head";
+import { useState, useEffect } from "react";
 import About from "../components/About";
 import Section from "../components/Section";
 import styles from "../styles/index.module.css";
-const index = () => {
+const index = (props) => {
+  const [currentUser, setCurrentUser] = useState();
+
+  useEffect(() => {
+    setCurrentUser(JSON.parse(props.user));
+  }, []);
   hideHeader();
   function hideHeader() {
     try {
@@ -26,7 +32,9 @@ const index = () => {
         </Head>
 
         <div className={`${styles.flexItemLeft}`}>
-          <h1>Hello Guest, Welcome to Hobbies</h1>
+          <h1>{`Hello ${
+            currentUser ? currentUser.firstName : "Guest"
+          }, Welcome to Hobbies`}</h1>
           <p className="gray-paras">
             Create and share your hobbies to the whole world. Its simple and
             completely free.

@@ -5,7 +5,15 @@ import { FiEdit2 } from "react-icons/fi";
 import Image from "next/image";
 import { Card } from "react-bootstrap";
 import RandomImage from "../../Assets/images/hobbies_d.svg";
-const Hobbies = ({ data }) => {
+import { useEffect, useState } from "react";
+const Hobbies = ({ data, user }) => {
+  const [currentUser, setCurrentUser] = useState();
+
+  useEffect(() => {
+    setCurrentUser(JSON.parse(user));
+  }, []);
+
+  // console.log(data);
   return (
     <div className="container">
       <Head>
@@ -41,15 +49,19 @@ const Hobbies = ({ data }) => {
                           ></AiTwotoneHeart>{" "}
                           {field.likes.length}
                         </span>
-                        <span>
-                          <FiEdit2 fill="green" stroke="green"></FiEdit2>
-                        </span>
-                        <span>
-                          <AiTwotoneDelete
-                            fill="darkred"
-                            stroke="darkred"
-                          ></AiTwotoneDelete>
-                        </span>
+                        {currentUser && currentUser._id === field.creator && (
+                          <span>
+                            <FiEdit2 fill="green" stroke="green"></FiEdit2>
+                          </span>
+                        )}
+                        {currentUser && currentUser._id === field.creator && (
+                          <span>
+                            <AiTwotoneDelete
+                              fill="darkred"
+                              stroke="darkred"
+                            ></AiTwotoneDelete>
+                          </span>
+                        )}
                       </div>
                     </Card.Body>
                   </Card>
