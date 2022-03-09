@@ -20,7 +20,7 @@ function Login() {
   const onSubmit = async (values) => {
     const result = await signIn(values);
     if (result && result.token) {
-      Cookie.set("user", JSON.stringify(result.result));
+      document.cookie = `user=${JSON.stringify(result.result)}`;
       router.push("/");
       toast.success("sign in successfull", {
         position: toast.POSITION.BOTTOM_CENTER,

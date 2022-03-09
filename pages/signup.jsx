@@ -6,8 +6,10 @@ import { ToastContainer, toast } from "react-toastify";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import { initialSignUpValues, signUpValidationSchema } from "../lib/models";
 import { signUp } from "../controllers/auth";
+import { useRouter } from "next/router";
 
 function SignUp() {
+  const router = useRouter();
   hideHeader();
   function hideHeader() {
     try {
@@ -18,7 +20,7 @@ function SignUp() {
   const onSubmit = async (values) => {
     const result = await signUp(values);
     if (result && result.token) {
-      Cookie.set("user", JSON.stringify(result.result));
+      document.cookie = `user=${JSON.stringify(result.result)}`;
       router.push("/");
       toast.success("sign in successfull", {
         position: toast.POSITION.BOTTOM_CENTER,
