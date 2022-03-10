@@ -6,14 +6,17 @@ import Image from "next/image";
 import { Card } from "react-bootstrap";
 import RandomImage from "../../Assets/images/hobbies_d.svg";
 import { useEffect, useState } from "react";
+import { deletePost, likePost } from "../../controllers/post";
+import { useRouter } from "next/router";
+
 const Hobbies = ({ data, user }) => {
   const [currentUser, setCurrentUser] = useState();
-
+  const router = useRouter();
   useEffect(() => {
     if (user) setCurrentUser(JSON.parse(user));
   }, []);
 
-  // console.log(data);
+  console.log(currentUser);
   return (
     <div className="container">
       <Head>
@@ -42,7 +45,13 @@ const Hobbies = ({ data, user }) => {
                       <Card.Text>{field.description}</Card.Text>
 
                       <div className="d-flex justify-content-around">
-                        <span>
+                        <span
+                          onClick={() => {
+                            likePost(field._id);
+                            router.replace(router.asPath);
+                          }}
+                          className={!currentUser && "disabled"}
+                        >
                           <AiTwotoneHeart
                             fill="deeppink"
                             stroke="deeppink"
@@ -55,7 +64,7 @@ const Hobbies = ({ data, user }) => {
                           </span>
                         )}
                         {currentUser && currentUser._id === field.creator && (
-                          <span>
+                          <span onClick={() => deletePost(field._id)}>
                             <AiTwotoneDelete
                               fill="darkred"
                               stroke="darkred"

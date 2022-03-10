@@ -19,8 +19,10 @@ function Login() {
   const router = useRouter();
   const onSubmit = async (values) => {
     const result = await signIn(values);
+
     if (result && result.token) {
       document.cookie = `user=${JSON.stringify(result.result)}`;
+      localStorage.setItem("profile", result.token);
       router.push("/");
       toast.success("sign in successfull", {
         position: toast.POSITION.BOTTOM_CENTER,
