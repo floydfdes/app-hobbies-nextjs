@@ -1,6 +1,6 @@
 import axios from "axios";
 import Head from "next/head";
-import { AiTwotoneHeart, AiTwotoneDelete } from "react-icons/ai";
+import { AiFillHeart, AiFillDelete, AiOutlinePlus } from "react-icons/ai";
 import { FiEdit2 } from "react-icons/fi";
 import Image from "next/image";
 import { Card } from "react-bootstrap";
@@ -25,6 +25,15 @@ const Hobbies = ({ data, user }) => {
 
       <div className="container hobbies-container">
         <div className="row">
+          <div className="col-lg-6 col-md-6 col-sm-8 col-8">
+            <h3>Feeds</h3>
+          </div>
+          <div className="col-lg-6 col-md-6 col-sm-4 col-4 text-end">
+            <button className="btn btn-primary">
+              <AiOutlinePlus />
+              <span className="d-none d-md-block">Create</span>
+            </button>
+          </div>
           {data &&
             data.map((field) => {
               return (
@@ -50,12 +59,12 @@ const Hobbies = ({ data, user }) => {
                             likePost(field._id);
                             router.replace(router.asPath);
                           }}
-                          className={!currentUser && "disabled"}
+                          className={!currentUser ? "disabled" : ""}
                         >
-                          <AiTwotoneHeart
+                          <AiFillHeart
                             fill="deeppink"
                             stroke="deeppink"
-                          ></AiTwotoneHeart>{" "}
+                          ></AiFillHeart>{" "}
                           {field.likes.length}
                         </span>
                         {currentUser && currentUser._id === field.creator && (
@@ -65,10 +74,10 @@ const Hobbies = ({ data, user }) => {
                         )}
                         {currentUser && currentUser._id === field.creator && (
                           <span onClick={() => deletePost(field._id)}>
-                            <AiTwotoneDelete
+                            <AiFillDelete
                               fill="darkred"
                               stroke="darkred"
-                            ></AiTwotoneDelete>
+                            ></AiFillDelete>
                           </span>
                         )}
                       </div>

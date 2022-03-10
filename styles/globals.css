@@ -25,7 +25,7 @@
   --color-2: #ffffff;
   --color-3: #f053a0;
   --color-4: #010010; */
-  --color-1: #01005c;
+  --color-1: #2c2e39;
   --color-2: #ffffff;
   --color-3: #5065e2;
   --color-4: #f96758;
@@ -123,4 +123,10 @@ stroke: var(--color-1); */
 
 .disabled {
   pointer-events: none;
+}
+.btn-primary {
+  color: var(--color-2) !important;
+  background-color: var(--color-1) !important;
+  outline: none !important;
+  border: none !important;
 }
