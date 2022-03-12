@@ -1,5 +1,6 @@
 import axios from "axios";
 import Head from "next/head";
+import Link from "next/link";
 import { AiFillHeart, AiFillDelete, AiOutlinePlus } from "react-icons/ai";
 import { FiEdit2 } from "react-icons/fi";
 import Image from "next/image";
@@ -29,10 +30,12 @@ const Hobbies = ({ data, user }) => {
             <h3>Feeds</h3>
           </div>
           <div className="col-lg-6 col-md-6 col-sm-4 col-4 text-end">
-            <button className="btn btn-primary">
-              <AiOutlinePlus />
-              <span className="d-none d-md-block">Create</span>
-            </button>
+            <Link href="/hobbies/createedit">
+              <button className="btn btn-primary">
+                <AiOutlinePlus />
+                <div className="d-none d-md-block">Create</div>
+              </button>
+            </Link>
           </div>
           {data &&
             data.map((field) => {

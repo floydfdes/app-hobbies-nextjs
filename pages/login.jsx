@@ -12,7 +12,6 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 import { loginValidationSchema, initialValues } from "../lib/models";
 import { signIn } from "../controllers/auth";
 import { useRouter } from "next/dist/client/router";
-import Cookie from "js-cookie";
 
 function Login() {
   const [screenWidth, setScreenWidth] = useState(0);

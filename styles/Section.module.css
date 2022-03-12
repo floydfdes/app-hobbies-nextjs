@@ -16,7 +16,7 @@
 }
 .cardSection {
   background: var(--color-3);
-  padding: 5rem;
+  padding: 3rem 5rem;
 }
 @media screen and (min-width: 720px) {
   .cardSection h1,

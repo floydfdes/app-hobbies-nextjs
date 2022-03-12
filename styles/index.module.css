@@ -1,24 +1,38 @@
-.home {
-  height: calc(100vh - 74px);
+@media screen and (max-width: 1200px) {
+  .home {
+    height: calc(100vh - 74px);
+    align-items: center;
+  }
 }
+
 .flexContainer {
   display: flex;
-  flex-wrap: wrap;
-  font-size: 30px;
+}
+.aboutPage.flexContainer {
   align-items: center;
+}
+@media screen and (min-width: 1200px) {
+  .flexContainer {
+    padding: 3rem 5rem;
+  }
 }
 .flexItemLeft {
-  padding: 10px;
-  flex: 50%;
-  align-items: center;
+  flex: 40%;
+  margin-top: 5%;
 }
 .flexItemLeft button {
-  display: none;
+  display: inline-block;
+  padding: 14px 28px;
+  border-radius: 10px;
+  background-color: var(--color-1);
+  color: white;
+  width: 100%;
+  max-width: 250px;
+  font-size: 16px;
 }
 
 .flexItemRight {
-  padding: 10px;
-  flex: 50%;
+  flex: 60%;
 }
 .flexItemRightContent {
   background: url("../Assets/images/hobbies_a.svg");
@@ -48,11 +62,7 @@
   }
   .flexItemLeft button {
     display: inline-block;
-    padding: 14px 28px;
-    border-radius: 10px;
-    background-color: var(--color-1);
-    color: white;
-    width: 100%;
+
     max-width: 300px;
     font-size: 16px;
   }

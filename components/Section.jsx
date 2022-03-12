@@ -16,26 +16,32 @@ const Section = () => {
       <div className={`d-flex ${styles.cardContainer}`}>
         <div className={`card ${styles.sectionCards} m-4 p-3 shadow`}>
           <Image src={bulb} alt="" />
-          <h3>Lorem ipsum</h3>
+          <h3>Create a hobby</h3>
           <span className="gray-paras">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis
-            porro neque voluptatibus fuga!
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic est
+            sunt aliquam error quibusdam distinctio vero possimus aperiam eum
+            maiores voluptatibus temporibus dolores fuga incidunt, voluptatum
+            assumenda amet odit quia?
           </span>
         </div>
         <div className={`card ${styles.sectionCards} m-4 p-3 shadow`}>
           <Image src={cardImage} alt="" />
-          <h3>Lorem ipsum</h3>
+          <h3>Edit a hobby</h3>
           <span className="gray-paras">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis
-            porro neque voluptatibus fuga!
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic est
+            sunt aliquam error quibusdam distinctio vero possimus aperiam eum
+            maiores voluptatibus temporibus dolores fuga incidunt, voluptatum
+            assumenda amet odit quia?
           </span>
         </div>
         <div className={`card ${styles.sectionCards} m-4 p-3 shadow`}>
           <Image height={200} src={like} alt="" />
-          <h3>Lorem ipsum</h3>
+          <h3>Like a hobby</h3>
           <span className="gray-paras">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis
-            porro neque voluptatibus fuga!
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic est
+            sunt aliquam error quibusdam distinctio vero possimus aperiam eum
+            maiores voluptatibus temporibus dolores fuga incidunt, voluptatum
+            assumenda amet odit quia?
           </span>
         </div>
       </div>

@@ -1,0 +1,13 @@
+.leftSection {
+  background-color: var(--color-3);
+  border-radius: 10px 0px 0px 10px;
+}
+.error {
+  color: red;
+}
+
+@media screen and (max-width: 764px) {
+  .leftSection {
+    display: none;
+  }
+}

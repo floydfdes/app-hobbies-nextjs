@@ -7,7 +7,7 @@ const Index = (props) => {
   const [currentUser, setCurrentUser] = useState();
 
   useEffect(() => {
-    if(props.user)setCurrentUser(JSON.parse(props.user));
+    if (props.user) setCurrentUser(JSON.parse(props.user));
   }, []);
   hideHeader();
   function hideHeader() {
@@ -18,7 +18,7 @@ const Index = (props) => {
   }
   return (
     <>
-      <div className={`container ${styles.home} ${styles.flexContainer}`}>
+      <div className={`container-fluid ${styles.home} ${styles.flexContainer}`}>
         <Head>
           <title>Hobbies</title>
           <meta
