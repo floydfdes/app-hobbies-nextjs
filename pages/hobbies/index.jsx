@@ -41,7 +41,7 @@ const Hobbies = ({ data, user }) => {
             data.map((field) => {
               return (
                 <div key={field._id} className="col-md-4 col-sm-12 my-2">
-                  <Card className="shadow-lg p-2">
+                  <Card className="shadow-lg">
                     {/* <Image
                       className="card-image"
                       height={200}
