@@ -1,11 +1,28 @@
-import { Formik, Form, Field, ErrorMessage } from "formik";
-import { initialPostValues, postValidationSchema } from "../../lib/models";
 import styles from "../../styles/Login.module.css";
 import hobbyStyles from "../../styles/CreateHobby.module.css";
+import { Formik, Form, Field, ErrorMessage } from "formik";
+import { ToastContainer, toast } from "react-toastify";
+import { initialPostValues, postValidationSchema } from "../../lib/models";
+import { useRouter } from "next/router";
+import { createPost } from "../../controllers/post";
 const CreateEdit = () => {
-  const onSubmit = async (values) => {};
+  const router = useRouter();
+  const onSubmit = async (values) => {
+    const result = await createPost(values);
+    if (result) {
+      router.push("/hobbies");
+      toast.success("Post created successfully", {
+        position: toast.POSITION.BOTTOM_CENTER,
+      });
+    } else {
+      toast.error(result.error.response.data, {
+        position: toast.POSITION.BOTTOM_CENTER,
+      });
+    }
+  };
   return (
     <>
+      <ToastContainer />
       <div className="container">
         <div className="row">
           <div

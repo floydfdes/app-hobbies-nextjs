@@ -21,7 +21,8 @@ function SignUp() {
     const result = await signUp(values);
     if (result && result.token) {
       document.cookie = `user=${JSON.stringify(result.result)}`;
-      localStorage.setItem("profile", result.token);
+      localStorage.setItem("token", result.token);
+      localStorage.setItem("profile", JSON.stringify(result.result));
       router.push("/");
       toast.success("sign in successfull", {
         position: toast.POSITION.BOTTOM_CENTER,
