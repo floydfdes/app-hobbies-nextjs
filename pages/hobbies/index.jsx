@@ -5,10 +5,10 @@ import { AiFillHeart, AiFillDelete, AiOutlinePlus } from "react-icons/ai";
 import { FiEdit2 } from "react-icons/fi";
 import Image from "next/image";
 import { Card } from "react-bootstrap";
-import RandomImage from "../../Assets/images/hobbies_d.svg";
 import { useEffect, useState } from "react";
 import { deletePost, likePost } from "../../controllers/post";
 import { useRouter } from "next/router";
+import Avatar from "react-avatar";
 
 const Hobbies = ({ data, user }) => {
   const [currentUser, setCurrentUser] = useState();
@@ -33,16 +33,16 @@ const Hobbies = ({ data, user }) => {
             <Link href="/hobbies/createedit">
               <button className="btn btn-primary">
                 <AiOutlinePlus />
-                <div className="d-none d-md-block">Create</div>
+                <div className="d-none d-md-inline">Create</div>
               </button>
             </Link>
           </div>
           {data &&
             data.map((field) => {
               return (
-                <div key={field._id} className="col-md-3 col-sm-12 my-2">
+                <div key={field._id} className="col-md-4 col-sm-12 my-2">
                   <Card className="shadow-lg p-2">
-                    <Image
+                    {/* <Image
                       className="card-image"
                       height={200}
                       width={200}
@@ -51,12 +51,23 @@ const Hobbies = ({ data, user }) => {
                       src={`https://source.unsplash.com/random/300x200?sig=${
                         field._id + Math.random()
                       }`}
-                    />
+                    /> */}
                     <Card.Body>
                       <Card.Title>{field.title}</Card.Title>
                       <Card.Text>{field.description}</Card.Text>
-
-                      <div className="d-flex justify-content-around">
+                      <div>
+                        <Avatar
+                          name={field.creatorName}
+                          size="24"
+                          round={true}
+                        />
+                        <span className="mx-2">
+                          <strong>{field.creatorName}</strong>
+                        </span>
+                      </div>
+                    </Card.Body>
+                    <Card.Footer className="text-muted">
+                      <div className="d-flex justify-content-around icon-span">
                         <span
                           onClick={() => {
                             likePost(field._id);
@@ -76,7 +87,12 @@ const Hobbies = ({ data, user }) => {
                           </span>
                         )}
                         {currentUser && currentUser._id === field.creator && (
-                          <span onClick={() => deletePost(field._id)}>
+                          <span
+                            onClick={() => {
+                              deletePost(field._id);
+                              router.replace(router.asPath);
+                            }}
+                          >
                             <AiFillDelete
                               fill="darkred"
                               stroke="darkred"
@@ -84,7 +100,7 @@ const Hobbies = ({ data, user }) => {
                           </span>
                         )}
                       </div>
-                    </Card.Body>
+                    </Card.Footer>
                   </Card>
                 </div>
               );
