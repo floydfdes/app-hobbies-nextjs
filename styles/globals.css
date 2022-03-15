@@ -36,46 +36,46 @@ html,
 body {
   padding: 0;
   margin: 0;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
+  background-color: var(--color-2) !important;
 }
 
 * {
   box-sizing: border-box;
 }
 
-body {
-  background-color: var(--color-2) !important;
-}
 p {
   font-family: "OpenSans Light";
   font-size: 1rem;
 }
 h1,
 h2,
-h3 {
-  font-family: "OpenSans Bold";
-  color: var(--color-1);
-}
-@media screen and (min-width: 1200px) {
-  h1 {
-    font-size: 4.5rem !important;
-  }
-}
-.h5 {
-  font-family: "OpenSans Bold";
-}
+h3,
+.h5,
 button {
   font-family: "OpenSans Bold" !important;
 }
+h1,
+h2,
+h3 {
+  color: var(--color-1);
+}
+
+@media screen and (min-width: 1200px) {
+  h1 {
+    font-size: 2.5rem !important;
+  }
+}
+
 .display-none {
   display: none;
 }
 svg {
   display: inline-block;
+}
+
+button:hover {
+  color: var(--color-2) !important;
+  background-color: var(--color-3) !important;
 }
 
 @media screen and (max-width: 768px) {

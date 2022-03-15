@@ -4,7 +4,6 @@
   font-family: "OpenSans Light";
   color: var(--color-4);
   text-align: center;
-
   padding: 35px 25px !important;
 }
 .sectionCards img {
@@ -41,5 +40,10 @@
   }
   .cardSection h1 {
     font-size: 3rem;
+  }
+}
+@media (max-width: 900px) {
+  .dFlex {
+    flex-direction: column;
   }
 }

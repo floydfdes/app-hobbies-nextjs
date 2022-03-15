@@ -13,7 +13,7 @@ const Section = () => {
       <div className="text-center">
         <h1>Our services</h1>
       </div>
-      <div className={`d-flex ${styles.cardContainer}`}>
+      <div className={`d-flex ${styles.dFlex} ${styles.cardContainer}`}>
         <div className={`card ${styles.sectionCards} m-4 p-3 shadow`}>
           <Image src={bulb} alt="" />
           <h3>Create a hobby</h3>
